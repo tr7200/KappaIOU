@@ -1,6 +1,6 @@
 """
 
-This code recreates the results from section 4 from the paper:
+This self-contained code recreates the results from section 4 from the paper:
 
 Rogers, Trevor F. (2026). "Kappa-IoU: Inter-Rater Reliability for Spatial Annotation"
 
