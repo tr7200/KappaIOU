@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "KappaIOU"
+version = "1.0.0"
+authors = [
+    { name="F. Trevor Rogers", email="rogers72@hawaii.edu" }
+]
+description = "A training-free, chance-corrected reliability library for continuous multi-object spatial annotations."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/tr7200/KappaIOU"
+"Bug Tracker" = "https://github.com/tr7200/KappaIOU/issues"
+
+[project.scripts]
+kappaiou-run = "kappaiou.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["kappaiou*"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
