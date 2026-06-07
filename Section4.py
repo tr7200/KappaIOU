@@ -72,7 +72,7 @@ def compute_image_kappa_iou(rater_a_boxes,
     N_B = len(rater_b_boxes)
     max_N = max(N_A, N_B)
     
-    # Handle boundary case where raters agree there are zero objects
+    # Simplified handling of boundary case where raters agree there are zero objects (No adjusted Kappa-IoU)
     if max_N == 0:
         P_0 = 1.0 / (1.0 - 1.0 + delta)
         kappa = (P_0 - tau) / (1.0 - tau)
